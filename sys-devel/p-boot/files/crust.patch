@@ -1,0 +1,26 @@
+diff --git a/Makefile b/Makefile
+index 1032202..1c877ce 100644
+--- a/Makefile
++++ b/Makefile
+@@ -10,7 +10,7 @@ TGT		 = $(OBJ)/scp
+ BUILDAR		 = ar
+ BUILDCC		 = cc
+ 
+-HOST_COMPILE	?= aarch64-linux-musl-
++HOST_COMPILE	?= aarch64-buildroot-linux-musl-
+ HOSTAR		 = $(HOST_COMPILE)gcc-ar
+ HOSTCC		 = $(HOST_COMPILE)gcc
+ 
+diff --git a/arch/or1k/Makefile b/arch/or1k/Makefile
+index c5c40a1..d91ce48 100644
+--- a/arch/or1k/Makefile
++++ b/arch/or1k/Makefile
+@@ -3,7 +3,7 @@
+ # SPDX-License-Identifier: BSD-3-Clause OR GPL-2.0-only
+ #
+ 
+-CROSS_COMPILE	?= or1k-linux-musl-
++CROSS_COMPILE	?= or1k-buildroot-linux-musl-
+ CFLAGS		+= -msfimm -mshftimm -msoft-div -msoft-mul
+ 
+ # The first object is used as the linker script.

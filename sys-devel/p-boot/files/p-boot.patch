@@ -1,0 +1,26 @@
+diff --git a/build/build.ninja b/build/build.ninja
+index 7c15e51..f0c22c2 100644
+--- a/build/build.ninja
++++ b/build/build.ninja
+@@ -2,7 +2,7 @@
+ 
+ ninja_required_version = 1.7
+ 
+-aarch64_prefix = aarch64-linux-musl-
++aarch64_prefix = aarch64-buildroot-linux-musl-
+ topdir = ..
+ srcdir = $topdir/src
+ ubootdir = $topdir/src/uboot
+diff --git a/fw/build-atf.sh b/fw/build-atf.sh
+index f246011..2cbb50a 100755
+--- a/fw/build-atf.sh
++++ b/fw/build-atf.sh
+@@ -3,7 +3,7 @@
+ test -f config && . ./config
+ set -e -x
+ 
+-export CROSS_COMPILE=aarch64-linux-musl-
++export CROSS_COMPILE=aarch64-buildroot-linux-musl-
+ 
+ rm -rf "atf/build"
+ 
